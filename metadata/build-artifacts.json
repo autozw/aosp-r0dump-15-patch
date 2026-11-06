@@ -1,0 +1,62 @@
+[
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system.img",
+    "bytes": 1077198848,
+    "sha256": "854b73f6cdd4ca077d5396a7f7ff414aa0bebee85ba766d68355c95f480d78c8",
+    "modified": "2026-11-05T21:59:08.420307+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/product.img",
+    "bytes": 647979008,
+    "sha256": "76879999ae6ec7bca8fdebe63f802a144e162384cc4fbe308f4dc356848ec99c",
+    "modified": "2026-11-05T21:27:51.280073+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system_ext.img",
+    "bytes": 223420416,
+    "sha256": "15221b87ff54c0532d60454262a0b39469a2342420bae2c94b505842213be3ce",
+    "modified": "2026-11-05T21:29:02.115244+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system_other.img",
+    "bytes": 57065472,
+    "sha256": "ccf433a7635c9b62fc3ea5c88641da768c0f76fb555d6efc0497f7ddf823b6aa",
+    "modified": "2026-11-05T21:58:53.066173+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/vbmeta.img",
+    "bytes": 8192,
+    "sha256": "e7af79c6bdd64e3d21c6fb71c06ecf12286697d500f4b16a45c4caf0b3193025",
+    "modified": "2026-11-05T21:59:08.686309+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/vbmeta_system.img",
+    "bytes": 4096,
+    "sha256": "67a3d3b0d895671677b7007f75fec866b1da4ca00ee876757af06578bd397bb5",
+    "modified": "2026-11-05T21:59:08.494307+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system/apex/com.android.art.capex",
+    "bytes": 19759104,
+    "sha256": "b89a6144d34d1b0abef1cf9829bc135d4eb8b83cc9ea33a75a297771111e4219",
+    "modified": "2026-11-05T21:27:34.656530+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system/priv-app/R0dumpManager/R0dumpManager.apk",
+    "bytes": 5522304,
+    "sha256": "057becf0dea324abdda1ca60e10af95496da390fe61dabf13536e0060754fd5e",
+    "modified": "2026-11-05T20:56:09.416947+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system/bin/r0dump_file_helper",
+    "bytes": 169256,
+    "sha256": "92aa0ac15a9db07971a54b74c94837bedb8f4080cf588f6dec6bc467b3680f32",
+    "modified": "2026-11-05T21:58:51.506159+08:00"
+  },
+  {
+    "file": "/media/zwzw/AOSP/new-15/out/target/product/raven/system/bin/r0dump_mcp_bridge",
+    "bytes": 14464,
+    "sha256": "e99b17151eaa0ea75cdc415799a65683ce12f047abbc22891618de35d9ce51f1",
+    "modified": "2026-11-05T20:48:51.401371+08:00"
+  }
+]

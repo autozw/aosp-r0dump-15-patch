@@ -1,0 +1,1088 @@
+{
+  "base_commits": {
+    "art": "814cc9385f8f8eaba6f4bfd1d723160c2132c76e",
+    "frameworks/base": "d41da232c75a51b4a9023d8d418d7c0a5120c0e2",
+    "libcore": "2aa1a1f67fdf8749ea202221dfd9f6a084656ebf",
+    "system/sepolicy": "570767727693ae34593da479e9023c464a2975de",
+    "device/google/raviole": "6742137ad54acd460d06ce6a8123de63b73f1c8f",
+    "build/soong": "905305efab4a376bd068ce2600b3f7e2e025d72d"
+  },
+  "series": [
+    {
+      "repository": "art",
+      "patch": "art.patch",
+      "files": 73
+    },
+    {
+      "repository": "frameworks/base",
+      "patch": "frameworks_base.patch",
+      "files": 25
+    },
+    {
+      "repository": "libcore",
+      "patch": "libcore.patch",
+      "files": 6
+    },
+    {
+      "repository": "system/sepolicy",
+      "patch": "system_sepolicy.patch",
+      "files": 7
+    },
+    {
+      "repository": "packages/apps/R0dumpManager",
+      "patch": "packages_apps_R0dumpManager.patch",
+      "files": 62
+    },
+    {
+      "repository": "device/google/raviole",
+      "patch": "device_google_raviole.patch",
+      "files": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "art/libdexfile/dex/dex_file.cc",
+      "baseline_sha256": "3e7d0fa3fda589e5959d83e469f943eb92b70239b4002d512eb72982dbabd314",
+      "result_sha256": "8c7ec4b227feeda217bca59b3a1a50f267729b724a3406c06101e67395218473",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/libdexfile/dex/dex_file.h",
+      "baseline_sha256": "8aa5c02946a645fea7c79caf454af57aa5771e27dc1da645d35c4052071d35b7",
+      "result_sha256": "d7c35df827bccfca0f004590818e3a1f5932e70255d50a50d605618c0de48398",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/libdexfile/dex/dex_file_loader.cc",
+      "baseline_sha256": "eb2c4a82053e84ad6ac6cae2bb3c12f9d4550d5cc80d9988482f28bb72071b2c",
+      "result_sha256": "37731682fb6e3551be68d05f68c66e72eb8f3723861673ccb64e76db48c1fd82",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/libdexfile/dex/dex_file_loader.h",
+      "baseline_sha256": "f3f401d05eb82cad8b8226424c0f4f7767d1a422a96ef019ffed17b547954f0f",
+      "result_sha256": "63f85f3c2d82515da8e4b86811c4e9cd2bc5688e69d9c00cfaee0bb0a1d7be5e",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/libdexfile/dex/dex_file_loader_test.cc",
+      "baseline_sha256": "7b77d5d3e443f2ef10059050d341177c7e549015a73d5b7af0f031fa49fefa58",
+      "result_sha256": "d77b11392f9ba7168895ae120c2f5cd52b64f50957d66a88baec12e5747772f7",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/Android.bp",
+      "baseline_sha256": "10e1a6490d3246cfa8cf846f86fb812e7531f98fc3a668d851a8de0ae4c7b3fe",
+      "result_sha256": "45ad12896150cbbf67093b4056dcc7c9dfb17ab083afe2a19e647b687da9a32d",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/art_method.cc",
+      "baseline_sha256": "ba9d767b136f6cfc7fc83384bf9139bd3bc795056e3b2026b541cdf950f0caa8",
+      "result_sha256": "6de95d94057227a644705e057c5f828aa3d1f077cd1b124d8c8acd9a6bc51f48",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/art_method_test.cc",
+      "baseline_sha256": "7ef87d11db669fa760c32d0a404df81557e53909f4227b9e4b34346fe1e31dda",
+      "result_sha256": "61a5895420011917b78e65ead446a5b5e3403b3c8dec3d2020399d3e2d9da237",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/class_linker.cc",
+      "baseline_sha256": "1922a20c2db4d78906f3b0633f2614f5ebc0eee136d461a3484d793848f12760",
+      "result_sha256": "8cc39400b0c422e8122718a5d01a634c584c3c1c383a82b0fad6df89ea87b2a0",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/instrumentation.cc",
+      "baseline_sha256": "36873bace043697d150375e6af99853040af62a92620b069cb1ba849af055d12",
+      "result_sha256": "1c66057139c3deaac74a7dfc9db703e1bf2245c8ec647d6ac81a3b9cd8ec5eff",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/interpreter.cc",
+      "baseline_sha256": "81ddfb4855c21f7d206e0d4becc2af3d961d76a7eb02e98fa0166ce28321799f",
+      "result_sha256": "5478db0e09fc66ca5dac803398e66d5892082260d3e928464a41caf848a6c5e0",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/mterp/arm64ng/main.S",
+      "baseline_sha256": "a3dbd953d4a578f20897d9793579cc5896aefa7459b53ac90d50693420b9444c",
+      "result_sha256": "d22197ae3b1ddead74dce1a2e97fb9dee584a2a87453fabc013d29f974ccdc01",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/mterp/armng/main.S",
+      "baseline_sha256": "ed7e4be491a2ecee75aa2794b3214259415673385a069a05588ec59c24592f95",
+      "result_sha256": "a704244e3e34d9edee21cbaf3936346cd7e572b9608561ee7a51480ff0170637",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/mterp/nterp.cc",
+      "baseline_sha256": "cf6b29f73441531e8432b5ce6817e54ed235b693f89d94b08b8dc90f122b6fdb",
+      "result_sha256": "806322e87be4cd6b6037fca6f05ac27c6a9f467e8ba61f7951e4a23c4d0337ee",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/mterp/riscv64/main.S",
+      "baseline_sha256": "14c4615ebb2b7d69d3e1300c4d8a079b8d5fca7a1dff81c180e4d7c08410f354",
+      "result_sha256": "d0a5b79d8ea58e2c7b19ea0cf01354b61f7e606d0a185a5ce6e62b1fef09caac",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/mterp/x86_64ng/main.S",
+      "baseline_sha256": "1941f4c43495e6feb11d57faf127de08a10d0e87688b73dc8fd2a46cb247e20b",
+      "result_sha256": "381ac05844d755c8b1fc5c2609a203c9615fad2c003dc00422841a247a2bbaa4",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/interpreter/mterp/x86ng/main.S",
+      "baseline_sha256": "d0c7e40d99c7950888c0b247bc89c3236ecc98adbace7b68cb7782935ed15473",
+      "result_sha256": "b700b7de5a255e1da5173153b743bfc9c3a895073feb9f79f31c5659719ed6e4",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/jit/jit.cc",
+      "baseline_sha256": "854f5342dabdeb38473f0a6b716d0d2923dc42aafc79337b1b6c07d1a77aaae7",
+      "result_sha256": "3af0b9a228e4aeb83b3b099a8add0587a10ded661af1efb7caf14889a5319dd5",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/native/dalvik_system_DexFile.cc",
+      "baseline_sha256": "e129bfaa82553502bd507c538e3a8d4889b91fa425459db8f4ef51a01d0ad30b",
+      "result_sha256": "2a7b4215f4213b30d0d85642c956c994df79b1f88e2a548e9f6d67fc6f32acc7",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/native/dalvik_system_DexFile.h",
+      "baseline_sha256": "f878c134f2b3e1fc6f07a76f5b1f44a89f7e159868b4ff4bfcd17d19522f5fe3",
+      "result_sha256": "2eefce175dec786bcc1dadca608666ecd6bad4b3d82bedc10dda39d9e166c9e0",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/native/dalvik_system_r0dump_Runtime.cc",
+      "baseline_sha256": null,
+      "result_sha256": "7a51386ce7b31a35190f1bb1a9068506ac1eaa1d8a8e555b0290bcf7155229bd",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/native/dalvik_system_r0dump_Runtime.h",
+      "baseline_sha256": null,
+      "result_sha256": "f9026b3114e2efc6e97577daf62733120a875d4d8e887694753bea4cb336b5e1",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/native/java_lang_reflect_Constructor.cc",
+      "baseline_sha256": "551ab6644fc45cced352f38b62b9fdac47dc0522fec901653a74956013b2460b",
+      "result_sha256": "374e469fccf51ee1e279ba8b83b3b9ca31280e7560cd27740e1ab5dca47b326a",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/native/java_lang_reflect_Method.cc",
+      "baseline_sha256": "ed093a01f35a2be19630f6f784d7ee0fbf6cc44f5fd8939e50cf22df1ee5bed0",
+      "result_sha256": "87d77a1cb65fd58169042f7bcb62b2aa4b8c3dd8b2d2679f046fa23d6b1ec2ae",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/oat/oat_file.cc",
+      "baseline_sha256": "1af93b77ac90a138be368b68c6af9b7602f7644d827110c6ff8d224048e43787",
+      "result_sha256": "58414ce7e221fc07861efdd2439b7ee56bc7eb18b3ded6848bef5ec9ea8a50d8",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/oat/oat_file_assistant.cc",
+      "baseline_sha256": "05bb3a9b2307798104bb10c7b2c6a4d77600dfc1e99c1745218e7bfd3cb2a0c6",
+      "result_sha256": "905ad1f5a06fa82c3d6e0443f75619fa9810fff9ba18760cd4556d3ea35c6102",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/oat/oat_file_manager.cc",
+      "baseline_sha256": "e0925d99d32ecfa82697cb12a093b8da68c52e1391df35d7bb8fea9e774a0aed",
+      "result_sha256": "a576ece1ef11ca51de3e6b47796b38c591c9846d952ca61caabb75d1be9b190c",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_buffer.cc",
+      "baseline_sha256": null,
+      "result_sha256": "883d5e673043237a71dccf23040f347eb858e596540e902bc32c33a57100bd8a",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_buffer.h",
+      "baseline_sha256": null,
+      "result_sha256": "edc4f567ee30aa082523a8b43ff0e7752479b4e23197c41fbca46cc1765531c8",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_buffer_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "b03bff08f9652494dfed4f523f9cc4885e6103d5e7f4888a7877e2a578524a82",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_capture.cc",
+      "baseline_sha256": null,
+      "result_sha256": "faad4faf88a62f632905d8e3ae1b8e4642508679d249c2b4fb283171d0774c13",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_capture.h",
+      "baseline_sha256": null,
+      "result_sha256": "4ca721874ebddc57371d3203142fe9dc41736470fb98518ef96238115cce54be",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_capture_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "8aaeca7e1493852c91ebfd827ac5f19204be8a9449668405f00137f1c78dec17",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_config.cc",
+      "baseline_sha256": null,
+      "result_sha256": "be4c5d46e1529e24979a88bcd0df186813a16f82d600ed413840fb054f499051",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_config.h",
+      "baseline_sha256": null,
+      "result_sha256": "5269bf192dc30ff652a5fc8740a3377788bcd268c40c17c219a0d25511857cbb",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_config_boundary_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "fb7f1579e25dc51d651688b84850783658b23ce39e1313378b0b4f66d86270e6",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_config_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "66a7a9a1fb2a6cab43b0736b7eb1be04b98ab0aecf45c6a27fbfe3149acb4426",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f2_canonical_output_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "d76616c564a0cca6c14b4def4d9dd1c22c9282d77345f7f76863d0bbb629724c",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f2_flush_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "4c8b8293ceccce9b4cda5ddb61e60260715600708c86035b1958d525cc59d507",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f3_hook_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "3320a8e7e0f4120b7008d46fe64c63ab9e28c2f885ea0f2f9f8970dc06995a92",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f4_class_linker_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "191638b97d48565a03ff6f4e9640d2771137963237c93ad36f2882f146fc569e",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f5_oat_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "5e7f1724bc892df914568009e2f43fe55d62bf05c8a43e6637875598c560eb80",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f7_class_loader_walk_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "981b37f4e43afc9335b32e6cef87c215f9f37c44c8eeed56549d74ad7c3911ed",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f8_force_invoke_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "4c6e13679286769378ccf39115cdeb71fd42a9c0e9d7eaec8b26b684cf5891dd",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f9_dispatch_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "0835c31855a58a3d25bcdb9bee22e2b79ce4356dc93da7bcc6cfbbd292effd04",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f9_jit_compile_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "792204c9f1c44038c59a564a1a717f3462824857de83d3b82c433e5bd8bc88dd",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f9_reflect_instrument_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "f6390a677b54364419a202d8dbac004dc6e09d7fa785c2966a663ca7d440a83e",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_f9d_libcore_route_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "7faaa2e9ae7d312361a23d78bced4b0d5c4064a903ea155f919040c991ff57d5",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_file.cc",
+      "baseline_sha256": null,
+      "result_sha256": "f8bb39f53b51cc7a8c404bd77c68432b8886e1b18d87e3eecfc6127662d86c01",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_file.h",
+      "baseline_sha256": null,
+      "result_sha256": "5c4f881f980672888b36e484139bc911a094eca956fbc23179ff48c9b6b9a0a7",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_file_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "28fa87bee4366dd1499e000f71c83d5aeb50195e67d621157ccd1711f5bc8c6a",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_force_invoke.cc",
+      "baseline_sha256": null,
+      "result_sha256": "500c00d9fee89639856b91c229da0fb902d314769df4960a260b5b4f2684214a",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_force_invoke.h",
+      "baseline_sha256": null,
+      "result_sha256": "2b54b85db952acd74d640a5278655d6e575b1059ddecc3f5d4b47fddb4f51ea5",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_hook_point.cc",
+      "baseline_sha256": null,
+      "result_sha256": "3aa0fb1bc2352cb32498eda160c804a4c2114ee5118ae6082cb7d6b60530508a",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_hook_point.h",
+      "baseline_sha256": null,
+      "result_sha256": "8fe056ab560a17f556e06e111c9da9b064107c41df3a1647fdeb4053e847caf3",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_hook_point_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "14c01e85e2f291341a94aac22ec81bb06062df0560730309ad55da3d9ffdc226",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_jni_contract_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "90b081132ccfb93e7340d7394a5a6921e2baafa5f65f7a78292caefb7b727e25",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_log.cc",
+      "baseline_sha256": null,
+      "result_sha256": "215791aa43c09ef56204c9f3e2c0ffcc03b5ecd7a61e6cf70481f684bb0589e4",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_log.h",
+      "baseline_sha256": null,
+      "result_sha256": "d21bbaaaedd685bbdbe03d0cd4b3cbd53b987f756fd583153593b54fefe224ec",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_log_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "d592555b0e8d7292471b2769f4bf4d3e5aff5a3c90c4187eabc67ffcda99173e",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_memory.cc",
+      "baseline_sha256": null,
+      "result_sha256": "ebaa70a78f62289658026c455e9230d01bac563ec31c85304bf70ca7324b66c8",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_memory.h",
+      "baseline_sha256": null,
+      "result_sha256": "3fd3a3e4a30eb80127a841a163798e8cc2871a839417aeb6262bad2db2dddc9c",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_nearby_snapshot.cc",
+      "baseline_sha256": null,
+      "result_sha256": "48734909be08e511c7fd99440e61cb36d1b1987e01f80bcef103469b45a902f8",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_nearby_snapshot.h",
+      "baseline_sha256": null,
+      "result_sha256": "a1f4fb0c3071323d4f2fe40a02117de580a407265d2a0664e44a5536b8a245df",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/r0dump/r0dump_nterp_method_entry_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "4cbc68614599314bd824e864a576befa1519289b0a862ba9c141c071c0cd28f3",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/runtime/runtime.cc",
+      "baseline_sha256": "b00b9b1d8167737e2838822cd956e831e663cbfc5b32b383301246bc99797774",
+      "result_sha256": "0b4b589c85cd381a8f88fb03296a4c18da71b222d3c7485938b2162fae688880",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/tools/r0dump/fixtures/readable_memory_test.cc",
+      "baseline_sha256": null,
+      "result_sha256": "7ac3d5803c807f7cadb636e5f78f650d0fa81babb0a207216d1741b1e58b6a19",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/tools/r0dump/r0dump_dex_rehydrate.py",
+      "baseline_sha256": null,
+      "result_sha256": "768f1e8970c018e4e7eda827dcee5bc02550e13de4a4283e3eb31216a4483d5a",
+      "mode": "0o775"
+    },
+    {
+      "path": "art/tools/r0dump/r0dump_host_repair.py",
+      "baseline_sha256": null,
+      "result_sha256": "aa0da4a45445d3096a919ba48999211b509e63cb2fc692af4c853e4ba011f452",
+      "mode": "0o775"
+    },
+    {
+      "path": "art/tools/r0dump/test_r0dump_dex_rehydrate.py",
+      "baseline_sha256": null,
+      "result_sha256": "265fd324c2ad263122cbd5590f4241991c98b2c22ad3e7c0b5f922c54658dbca",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/tools/r0dump/test_r0dump_host_repair.py",
+      "baseline_sha256": null,
+      "result_sha256": "a21e5f02cada47c51114082d43ceb028567767ff59cbd1c41c0f6c91cd07e18e",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/tools/r0dump/test_readable_memory.py",
+      "baseline_sha256": null,
+      "result_sha256": "1895ce82f1ce65b3827a137d5bc8bac3622245bd1bddc223799649c06b3b608d",
+      "mode": "0o664"
+    },
+    {
+      "path": "art/tools/r0dump/test_standard_roundtrip.py",
+      "baseline_sha256": null,
+      "result_sha256": "b6add41c4ff915be7811c4c39dffcc3d30c8fe82cdd73017509ba6c801fdef5d",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/java/android/app/ActivityThread.java",
+      "baseline_sha256": "36ac7893ac843d37f811e033c7ca687c7a795a53306f0ce29bc1a690b62c91f0",
+      "result_sha256": "3a54187be2a246953fed9a801fe90abd61efa0f40ee8061c84bed4b626ce81e6",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/java/android/app/IActivityManager.aidl",
+      "baseline_sha256": "a7d7f71d601e917025814f9571cec7b28afc0a5cc9f27ec99dbbfb16fa223966",
+      "result_sha256": "19625a42f18e60719161013df246418b9a8cb8af2f5326ed69df9626beac5708",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/java/android/app/r0dump_ClassLoaderWalk.java",
+      "baseline_sha256": null,
+      "result_sha256": "9b2f48ee13c597bd6ec19d4d3e3a0835bf52dfac9a8cfa0985513dd202624ad0",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/java/android/app/r0dump_FileWorker.java",
+      "baseline_sha256": null,
+      "result_sha256": "9b1057749268dda41bf64ba0537c6985c2a9c7dc437350f54edd00c56690ccaf",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/java/android/app/r0dump_FusionConfig.java",
+      "baseline_sha256": null,
+      "result_sha256": "12dd83e2f55eb6212791688a8a2aeb32d49b3593027481c7b3666a8387af3e76",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/java/android/app/r0dump_ManifestHelper.java",
+      "baseline_sha256": null,
+      "result_sha256": "a82adfff22056a8f36671d4926b17aee1bb5541e28cb83fdbdcb9cb693c9b08a",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/res/AndroidManifest.xml",
+      "baseline_sha256": "b4fe5e97e1097f5205bb9e2ee4af00cfdd09695d26fdd9003ad4710fb5a9ddf7",
+      "result_sha256": "641be801d065c1d6c0d7d887d5e90c067c7bbd1fb0fa439a5f04d60fc7afc418",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/Android.bp",
+      "baseline_sha256": "804d36812ed3a9275035944e43875182f8d59fed06c08092892214ec7a2bf5b2",
+      "result_sha256": "fbe6c7f96d6ba25eb7da1172060de69606420914286c7a7c276dbd3c72ccd2a1",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/Android.bp",
+      "baseline_sha256": null,
+      "result_sha256": "5bdb86b6c2c943a34153e6a44288228f683df582c07bf988c6fbd54a5646cc15",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/base/AndroidManifest.xml",
+      "baseline_sha256": null,
+      "result_sha256": "b0583560a2950ab4f1d9248409daa0ba8d5e07a838389225355019459181f77a",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/force/AndroidManifest.xml",
+      "baseline_sha256": null,
+      "result_sha256": "9b09000b5f6df4ac030493299e7ac55b6c4e7b7cec7df890b2db54da473b521e",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/force/src/com/android/frameworks/coretests/r0dumpforce/r0dump_ForceFailTargetActivity.java",
+      "baseline_sha256": null,
+      "result_sha256": "e0d39f07356a795bef752f77a015735bec4917cfe66fcaf643d73b43b21046ea",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/force/src/com/android/frameworks/coretests/r0dumpforce/r0dump_ForceFixtureActivity.java",
+      "baseline_sha256": null,
+      "result_sha256": "5b25909e66c29b665f5b4173eafc1368e4bd07a1af36df00a2a3de8db2a7cd49",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/force/src/com/android/frameworks/coretests/r0dumpforce/r0dump_ForceFixtureApplication.java",
+      "baseline_sha256": null,
+      "result_sha256": "f667d3c0954ed186588eb926ffb1062eb05122d02d4e410ce4a0321111ec1b76",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/force/src/com/android/frameworks/coretests/r0dumpforce/r0dump_ForceTargetActivity.java",
+      "baseline_sha256": null,
+      "result_sha256": "d0ec2c30e76da9f36576777d0d23fe3fcef51173f4c3430e81ea997ed8b28afc",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/mismatch/AndroidManifest.xml",
+      "baseline_sha256": null,
+      "result_sha256": "fbc657ae944f7e51ec34e23766f7430cc63cbc05ec7bf13723ff95fdff2c49f9",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/apks/r0dump_manifest/split/AndroidManifest.xml",
+      "baseline_sha256": null,
+      "result_sha256": "346354a15b7838290200e0cec30c90c1db983718dd823f2d3a27290804e37759",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/src/android/app/r0dump_FusionConfigTest.java",
+      "baseline_sha256": null,
+      "result_sha256": "6161a0f09c668b375487ba7357a99550800553f818aba8bbba9ae12dc2eb3ede",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/core/tests/coretests/src/android/app/r0dump_ManifestHelperTest.java",
+      "baseline_sha256": null,
+      "result_sha256": "5513e90381a7191bd70ac347a2eebbd4ed0c0645013fd67bad2ac4db66e54d9f",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java",
+      "baseline_sha256": "a92870e633ca8d0601fcd512ec6103e26facd745ac06c1aaa8059dbdc63319d4",
+      "result_sha256": "fd687d4e213edb0e104912c94934fcfd41f4ee7c73cfec665f35313b848f2b9d",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/services/core/java/com/android/server/am/ProcessErrorStateRecord.java",
+      "baseline_sha256": "b513c4b046d02ab1a5a2fb0fe293bdf716b05bf92033efb10cce7d1097bf5b86",
+      "result_sha256": "7d3b50b8b11b703d3e77326eecc853df000cf5a3ce782e4c7ce43a9b15f938df",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/services/core/java/com/android/server/am/r0dump_FilePreparationBridge.java",
+      "baseline_sha256": null,
+      "result_sha256": "50da34ef02e4dae754d1222fafac7061b1fd489f9999562dbee885fbd4f53b59",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/services/core/java/com/android/server/am/r0dump_anr_protection_source_test.py",
+      "baseline_sha256": null,
+      "result_sha256": "bc2318baf1596c92f21ffe0a9951e59da300cad06ee8e2f0ee8ac18d74cae98c",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/services/tests/servicestests/src/com/android/server/am/ProcessRecordTests.java",
+      "baseline_sha256": "e0257d1c8a85756b73e52248e4d5fad0240d76feda79f90d12835a3f14fe7e7f",
+      "result_sha256": "4b7ab2c5ab9bbe78c6736608d40d233c428e8ed6fabea7fc73419a197802c509",
+      "mode": "0o664"
+    },
+    {
+      "path": "frameworks/base/services/tests/servicestests/src/com/android/server/am/r0dump_FilePreparationBridgeTest.java",
+      "baseline_sha256": null,
+      "result_sha256": "0863674f8d25163dc22d1c09afae9c538cad2449878c70c7a07a0ac834e3f5bf",
+      "mode": "0o664"
+    },
+    {
+      "path": "libcore/api/module-lib-current.txt",
+      "baseline_sha256": "91d53b5c10c85776f4c02f5c3d1bdaa9b5f94b201045352ad211a38ed186d3ce",
+      "result_sha256": "1e6362db6f169fa01ec1b4f9b1c1c7cb0b756f49ef4c461e8a3b8c674333e496",
+      "mode": "0o664"
+    },
+    {
+      "path": "libcore/dalvik/src/main/java/dalvik/system/BaseDexClassLoader.java",
+      "baseline_sha256": "6b9d1896dbf1ee9e6ff75d3e6b298224369ca127d11e6d296bdba9a4505161cf",
+      "result_sha256": "fbe9411c5d4bdb8000532b3f33b95148f0991384f84d938e082d5cd4bfa71ff4",
+      "mode": "0o664"
+    },
+    {
+      "path": "libcore/dalvik/src/main/java/dalvik/system/DexFile.java",
+      "baseline_sha256": "a7396b0ea41cacb93f7606b1b9ef862c3fe1c8641499894c0aedd25d16aa6b0c",
+      "result_sha256": "c9d1cd5335069401194c989d34ff40774c3afe4104305bb4e89a7cf35018f6b7",
+      "mode": "0o664"
+    },
+    {
+      "path": "libcore/dalvik/src/main/java/dalvik/system/DexPathList.java",
+      "baseline_sha256": "57a659d39cacc8e76ed1cfdbd0460640bf575da56cc303f756d89d42e2b80e08",
+      "result_sha256": "e4362729be8fd3d7d7febc71b9d75ba198a8da8017a4aaf0f75ab7662838e6e4",
+      "mode": "0o664"
+    },
+    {
+      "path": "libcore/libart/src/main/java/dalvik/system/r0dump_Runtime.java",
+      "baseline_sha256": null,
+      "result_sha256": "b48389e16cd69e104807bab0faee6349be689cdd7267d6ceb798a2cfab9dba35",
+      "mode": "0o664"
+    },
+    {
+      "path": "libcore/non_openjdk_java_files.bp",
+      "baseline_sha256": "df5914e8df5e1a16dd6a64680da3ead372f595f6167b837674d7947f84390269",
+      "result_sha256": "52487f67c5b3026b93f192f7bc0427c68bedc929a8242ce105ada0ba670450a3",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/file.te",
+      "baseline_sha256": "225fb2d26c99d74b17f90e573ee612a637a41b0b71bb02faa82598438fcd0279",
+      "result_sha256": "a8423ba1e42fbac805803faffeb185103caa3d47e8db1c2531f63a57448803d2",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/file_contexts",
+      "baseline_sha256": "7dc8d1a8d9b2cb667deec80767a98928888d45fd54423edb8074f62da2149c26",
+      "result_sha256": "ddf866d34432bf876b212a1339fca8ce0183962b99d418d94f97ac8ced384f44",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/property.te",
+      "baseline_sha256": "e0e362c0d1e99da6fababb06d9764cc9f94f3b49be628b337a9ef488e1b381db",
+      "result_sha256": "6a8737c6eb4ec174e26837609db7c209261359bac9c8ee4ec30333b908b89e15",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/property_contexts",
+      "baseline_sha256": "5192dd6e0554fb53f20a0718de4713e1bcd0d2db9a1db174059db40975ab7f8e",
+      "result_sha256": "5c1174dc01498035910d01173d57448580df503532b77969e8c38a9e4a12b75e",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/r0dump_file_helper.te",
+      "baseline_sha256": null,
+      "result_sha256": "56e6429afd67fe73d4869ae197fa4e94baaddceb02801e76b42071572f268080",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/r0dump_manager_app.te",
+      "baseline_sha256": null,
+      "result_sha256": "e71aec89f6edb883d5aed11b660282b43c7616815372b6c447bf5a4e3facdaf1",
+      "mode": "0o664"
+    },
+    {
+      "path": "system/sepolicy/private/seapp_contexts",
+      "baseline_sha256": "1d42217cd5712a200c43a7740a368f2f90cb90d405b528b5e08cfc745b2bdbd0",
+      "result_sha256": "fe498092a6e335800441fa25f31bc3cc60b990df715ee532f5f0cd5b2117ddfc",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/.gitignore",
+      "baseline_sha256": null,
+      "result_sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/Android.bp",
+      "baseline_sha256": null,
+      "result_sha256": "54369e6f17495c2b560e40f73b328ac603e24eb956a5f9c633adfe6b7c7798df",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/AndroidManifest.xml",
+      "baseline_sha256": null,
+      "result_sha256": "29af4ba5a0989aee47b7f4aa5d01d53c1bfc15ae7baf705b17d1691d5c301119",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/DESIGN.md",
+      "baseline_sha256": null,
+      "result_sha256": "02b83e7af17784fb30408efeb3c6f23d4b6bd9de2b65242d92c176410ce84363",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/IMPLEMENTATION.md",
+      "baseline_sha256": null,
+      "result_sha256": "2b231ab7481d3f4156c022f214313b03087c4a93eb7dbdfa89fdf5a68da07d97",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/PRODUCT.md",
+      "baseline_sha256": null,
+      "result_sha256": "f9dab86d17131391a94e7f8eb73efab4c38cb44ce2fead3514b7149da3b7d342",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/README_AOSP15.md",
+      "baseline_sha256": null,
+      "result_sha256": "9eccd1a6154698eed3aa77e0ef5befb5f100f99474f3305e9e6f31750546aaea",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/STATUS.md",
+      "baseline_sha256": null,
+      "result_sha256": "4d6605956c26bc7f6fbed1f74b8fe74bda5475bc469ffc6c2cb9986ee2c8f683",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/Android.bp",
+      "baseline_sha256": null,
+      "result_sha256": "4133f8d83efb7e214444b0b7201a713b0b95cc2015da33f6ec99c9098500abab",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_export_core.cpp",
+      "baseline_sha256": null,
+      "result_sha256": "fe0f9e687156946720585d84467949f187d8e1ecd8d93093286ca5b3d8ff3761",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_export_core.h",
+      "baseline_sha256": null,
+      "result_sha256": "98ee2717a3d2851cb0dd887749397fb0394e8f9fa80f03fea3e170cc39c9a75b",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_file_helper.cpp",
+      "baseline_sha256": null,
+      "result_sha256": "b3d757a3356e353ed60b429bbc73f9ca3cceb1bc1df61415a0518f6adfe8d37f",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_file_helper.rc",
+      "baseline_sha256": null,
+      "result_sha256": "07dbed5a71d3feb4149f4ef55acd0e57ad01164e9c8605f83510e9757465d06a",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_file_helper_core.cpp",
+      "baseline_sha256": null,
+      "result_sha256": "65dac6fd04c1aa03eb7daa1dd29f710d91f2727f098c7bd3a780c6ee7f1ecacb",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_file_helper_core.h",
+      "baseline_sha256": null,
+      "result_sha256": "29fa981efd5d2a9300a404eb696ff4c7e1cbc7fa2521a050014157626b79dc13",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_file_helper_protocol.h",
+      "baseline_sha256": null,
+      "result_sha256": "35223a62d45d3c18909c9576ed39460cf2183d56315f102ee8a26bc8f52a874f",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_file_helper_test.cpp",
+      "baseline_sha256": null,
+      "result_sha256": "47cde5299326c66f4c2e5b092267e153006e30b4012e85b8d5cb1be7d04bd214",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/helper/r0dump_mcp_bridge.cpp",
+      "baseline_sha256": null,
+      "result_sha256": "e7283a83131df29069617d99f65d0f056170d5d1becb409b6900d3fd10a14419",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/privapp-permissions-com.android.r0dumpmanager.xml",
+      "baseline_sha256": null,
+      "result_sha256": "ba71812096cfddfd70d9044415010df929eebcaea14f0e677efbea9c6363de73",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/product.mk",
+      "baseline_sha256": null,
+      "result_sha256": "0a566a178ecb40d276bd1a07bdd2aeff3a6a32792b99566782fb29f3893f8f12",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/res/drawable/ic_r0dump_manager.xml",
+      "baseline_sha256": null,
+      "result_sha256": "ef2f9b962b0df0ba93497bcb328e7c8f7cbd922d9a11eddf0da0864d34783c4b",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/res/values-zh-rCN/strings.xml",
+      "baseline_sha256": null,
+      "result_sha256": "eb2fb065c8707ca23508c5867fc7bff3a294db2cfcb5740ed5c71b6a8bacaa23",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/res/values/strings.xml",
+      "baseline_sha256": null,
+      "result_sha256": "85097012b3194c75f5a8393347f842d6338a54c8c51008515793f668ee8dce80",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/res/values/styles.xml",
+      "baseline_sha256": null,
+      "result_sha256": "50b83136df18f666a21c8d9444979a4b4a239d52302bb2bed386630d7b7a8fca",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/res/xml/locales_config.xml",
+      "baseline_sha256": null,
+      "result_sha256": "081df93cf867d8786fcef29b97d04119f4afb9455a8f2874a51491ea63285d45",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/MainActivity.kt",
+      "baseline_sha256": null,
+      "result_sha256": "4e88d29281d35b736043d5c17bcb0d91e52c2ec487acaa5c885e120694b77ad4",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/app/R0dumpManagerViewModel.kt",
+      "baseline_sha256": null,
+      "result_sha256": "f35789a0573a6c3763c683ea7ec8e3771a6179d95745eaf5916fe78a6d1aa899",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/data/audit/MutationAuditLog.kt",
+      "baseline_sha256": null,
+      "result_sha256": "fc68ce445a801390e5a1077ad5681022c593df51fe09d0dd7994f8e99a430bdd",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/data/draft/DraftStateStore.kt",
+      "baseline_sha256": null,
+      "result_sha256": "77127aeb4ffa79e8aadc4b0de7e84633e8380d566f69510a69ba6f08c8852007",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/data/export/ArtifactExportRepository.kt",
+      "baseline_sha256": null,
+      "result_sha256": "479c174beac4f8e7a6989c925167bdf4fbf4f15c2e26c38793b9ec845b338431",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/data/packageinfo/PackageRepository.kt",
+      "baseline_sha256": null,
+      "result_sha256": "efe88ccae768aed379d24125110d330d9099ad85865d1f5c1ba58f13de535bd0",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/data/property/FusionPropertyRepository.kt",
+      "baseline_sha256": null,
+      "result_sha256": "f8a733dbeb50fc54f2577d3a2724330510dd069f7bfb010e3d902899b84a4ad2",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/data/ui/UiStateStore.kt",
+      "baseline_sha256": null,
+      "result_sha256": "1132a08a7510e20780d0199c5b9d809d8166a50ab4dcce1ba02723ad894105c6",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/domain/CapturePointRegistry.kt",
+      "baseline_sha256": null,
+      "result_sha256": "3b5c90f60a38a1ff1d833929e4b03bb1beaede8d9063972b1c32ea8ddee6d5f5",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/domain/FusionConfigDraft.kt",
+      "baseline_sha256": null,
+      "result_sha256": "5aa1e81fb6307b7c608bc6f9634f45dc77db2155070c90eb04170a3a5a4d2c8e",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/domain/FusionConfigSchema.kt",
+      "baseline_sha256": null,
+      "result_sha256": "5a5bd8b048bf87e2d897d2bc15a668bc328ab33fb1e41b01c8b676e9a12c342b",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/domain/FusionConfigValidator.kt",
+      "baseline_sha256": null,
+      "result_sha256": "682e2170497a15a5237b3844c9278fae79cc19ab1e4b80b485909f7346b4686c",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/domain/ProfileRegistry.kt",
+      "baseline_sha256": null,
+      "result_sha256": "e2979a4b771c73408d386ef8db0a7d11fcfa278b2df295b75aa8f2aa8d3d104b",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/mcp/McpBridgeService.kt",
+      "baseline_sha256": null,
+      "result_sha256": "f27dcf370442fc6084b75a79b7847c163bf1789ee895bdb54478116513127d04",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/mcp/McpServer.kt",
+      "baseline_sha256": null,
+      "result_sha256": "424728168dd2745bf7d87ccdc6b08944b684cad665080fb05e8cbf1bb1a74318",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/notification/ActiveSessionNotifier.kt",
+      "baseline_sha256": null,
+      "result_sha256": "a1cb6d1af62c91def9c0e73bcaf39c3e5675d1d0a13c85e2f4fedb25ef4bd0df",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/receiver/BootCompletedReceiver.kt",
+      "baseline_sha256": null,
+      "result_sha256": "56bb16b00bbedbaf3b367f8bc6b2240d62f273fc97c210e6a8890ae6ea3018ea",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/ui/BudgetValueFormatter.kt",
+      "baseline_sha256": null,
+      "result_sha256": "97882538fa1d0630ce455e7857ed735f848ff5fed54814b40660514124836f4c",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/ui/R0dumpManagerScreen.kt",
+      "baseline_sha256": null,
+      "result_sha256": "3c069067f7f533304336875715e3282849927b3f725401a9705aeeb4ea4411a4",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/src/com/android/r0dumpmanager/ui/theme/Theme.kt",
+      "baseline_sha256": null,
+      "result_sha256": "8049eb6e19550bbfff3cca154b423c2737e660b25cd1f2597a9a00bf571cbb88",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/AndroidManifest.xml",
+      "baseline_sha256": null,
+      "result_sha256": "be5f500a5955090731527895191d76b66f7151ef94fc63ce08689709b7a0ced4",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/app/R0dumpManagerViewModelTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "7ffa66077521a68b9917e6baad81436f8287303850be709740bbe983df107c89",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/data/draft/DraftStateStoreTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "fb3b8022fd2dfa703a8ab576717c44f39e478dbdfe804c300af6914fedcae2dc",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/data/export/ArtifactExportRepositoryTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "34fd666617327f44dc138b95e61bf3940d9e417d0d2054b5c848726903a5390a",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/data/property/FusionPropertyRepositoryTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "c401e082de462753c9e8b258be1cb007fd7fb0c84d7ec74b56c171cbf83e35f1",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/data/ui/UiStateStoreTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "9a840358a200356d389dd185ac036d86d63e978ea8a96ddf1175302d5a6e9200",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/domain/FusionConfigContractTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "c5d74f97d7f4bb55998f737331acae092a6ddd42ace4e4d457044e2ae61a7695",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/ui/AdvancedSettingsGroupTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "4115dbdbb327817ff0477ca6ad579ab3d002fa906e9f832f0cded89b54a19d79",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/ui/BudgetValueFormatterTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "7c87a48d8e13a715ec9e6eca91a902eeb5b5de2ae535f9e2955103bf78df194b",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/ui/CapturePointGroupTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "24870c44ae0f32113b23d0a0f4f3448df80011f6a2f2a59b1321eec3d231bafe",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tests/src/com/android/r0dumpmanager/ui/FusionActionToolbarTest.kt",
+      "baseline_sha256": null,
+      "result_sha256": "30be3cee526eb75777e709269fcb7c64c34a7bcb1901082dd2427a526b6a9716",
+      "mode": "0o664"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tools/deploy_userdebug.sh",
+      "baseline_sha256": null,
+      "result_sha256": "0f5495ff12e863252ca6bec50f238acfb8d4087162c663b3b876992fdfddf622",
+      "mode": "0o775"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tools/export_latest.py",
+      "baseline_sha256": null,
+      "result_sha256": "9696edcb58e2c7e117304d528affacc687d33d73f2e0655d54f5862a299f2367",
+      "mode": "0o775"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tools/final_acceptance.sh",
+      "baseline_sha256": null,
+      "result_sha256": "7bccee3df4ec9a65f6be7302433722c2c583a79c35306217b754cfc81c94f83b",
+      "mode": "0o775"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tools/test_export_latest.py",
+      "baseline_sha256": null,
+      "result_sha256": "dfd799904b0c0d4f12159afe4f4b79af894cb6b53107c27eb95cddefae448b5b",
+      "mode": "0o775"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tools/validate_post_flash.sh",
+      "baseline_sha256": null,
+      "result_sha256": "d5cc5381d02cf07560083c791662b55057e876c389f5fa8276803b26cee4bc3a",
+      "mode": "0o775"
+    },
+    {
+      "path": "packages/apps/R0dumpManager/tools/validate_source_contracts.sh",
+      "baseline_sha256": null,
+      "result_sha256": "a9f257bde965209b44f2c28e8b49a5d9a73318db06b6c07e12337bd181b4932d",
+      "mode": "0o775"
+    },
+    {
+      "path": "device/google/raviole/aosp_raven.mk",
+      "baseline_sha256": "94afeda606c6289999954d582192f7a69b303972e2fd993cb2545d27ee1f1d6b",
+      "result_sha256": "9d095d2fadadd46ca01817355d9caefa32b5a541f99152b0022ef5a3687715a9",
+      "mode": "0o664"
+    }
+  ]
+}

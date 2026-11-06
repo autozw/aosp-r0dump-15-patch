@@ -1,0 +1,10 @@
+diff --git a/aosp_raven.mk b/aosp_raven.mk
+--- a/aosp_raven.mk
++++ b/aosp_raven.mk
+@@ -33,3 +33,6 @@
+ 
+ # Per-app device profile manager (privileged control plane).
+ PRODUCT_PACKAGES += DeviceProfileManager
++
++# ART-integrated DEX capture, reconstruction and export.
++$(call inherit-product, packages/apps/R0dumpManager/product.mk)
