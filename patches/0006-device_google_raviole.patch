@@ -1,0 +1,9 @@
+diff --git a/aosp_raven.mk b/aosp_raven.mk
+--- a/aosp_raven.mk
++++ b/aosp_raven.mk
+@@ -19,2 +19,5 @@
+ 
++# ART-integrated DEX capture, reconstruction and export.
++$(call inherit-product, packages/apps/R0dumpManager/product.mk)
++
+ PRODUCT_NAME := aosp_raven

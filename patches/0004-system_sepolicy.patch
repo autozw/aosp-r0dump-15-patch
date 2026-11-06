@@ -1,0 +1,137 @@
+diff --git a/private/file.te b/private/file.te
+--- a/private/file.te
++++ b/private/file.te
+@@ -241,3 +241,6 @@
+ ')
+ ## END Types added in 202504 in public/file.te
+ 
++
++type r0dump_file_helper_socket, file_type, coredomain_socket;
++type r0dump_file_helper_exec, system_file_type, exec_type, file_type;
+diff --git a/private/file_contexts b/private/file_contexts
+--- a/private/file_contexts
++++ b/private/file_contexts
+@@ -284,6 +284,8 @@
+ /system/bin/incident   u:object_r:incident_exec:s0
+ /system/bin/incidentd   u:object_r:incidentd_exec:s0
+ /system/bin/incident_helper  u:object_r:incident_helper_exec:s0
++/system/bin/r0dump_file_helper  u:object_r:r0dump_file_helper_exec:s0
++/dev/socket/r0dump_file_helper  u:object_r:r0dump_file_helper_socket:s0
+ /system/bin/iw                   u:object_r:iw_exec:s0
+ /system/bin/netutils-wrapper-1\.0    u:object_r:netutils_wrapper_exec:s0
+ /system/bin/vold	u:object_r:vold_exec:s0
+diff --git a/private/property.te b/private/property.te
+--- a/private/property.te
++++ b/private/property.te
+@@ -855,3 +855,5 @@
+   -init
+   userdebug_or_eng(`-su')
+ } bionic_linker_16kb_app_compat_prop:property_service set;
++
++system_restricted_prop(r0dump_fusion_prop)
+diff --git a/private/property_contexts b/private/property_contexts
+--- a/private/property_contexts
++++ b/private/property_contexts
+@@ -1726,3 +1726,5 @@
+ # Properties for enabling/disabling system services
+ ro.system_settings.service.odp_enabled   u:object_r:system_service_enable_prop:s0 exact bool
+ ro.system_settings.service.backgound_install_control_enabled   u:object_r:system_service_enable_prop:s0 exact bool
++
++persist.sys.r0dump.fusion. u:object_r:r0dump_fusion_prop:s0 prefix string
+diff --git a/private/r0dump_file_helper.te b/private/r0dump_file_helper.te
+new file mode 100644
+--- /dev/null
++++ b/private/r0dump_file_helper.te
+@@ -0,0 +1,54 @@
++type r0dump_file_helper, domain, coredomain;
++init_daemon_domain(r0dump_file_helper)
++
++# Captured app artifacts inherit the target app's MCS categories. The helper is
++# a platform daemon that validates and confines every request to the package
++# selected by system_server, so it must be able to cross those categories.
++typeattribute r0dump_file_helper mlstrustedsubject;
++
++get_prop(r0dump_file_helper, r0dump_fusion_prop)
++
++allow r0dump_file_helper self:capability { chown fowner fsetid setuid };
++allow r0dump_file_helper self:unix_stream_socket { accept listen read write getattr getopt setopt };
++
++# Traverse the per-user mount namespace before opening the FUSE-backed root.
++allow r0dump_file_helper mnt_user_file:dir search;
++
++# The emulated-storage FUSE daemon performs checks against the backing
++# media_rw data label while the helper walks and prepares app external files.
++allow r0dump_file_helper media_rw_data_file:dir create_dir_perms;
++allow r0dump_file_helper media_rw_data_file:file create_file_perms;
++
++# The helper performs only fd-relative directory preparation below app external files.
++allow r0dump_file_helper fuse:dir {
++  add_name
++  create
++  getattr
++  open
++  read
++  remove_name
++  rmdir
++  search
++  setattr
++  write
++};
++allow r0dump_file_helper fuse:file create_file_perms;
++
++# system_server opens the installed base/split APKs after validating the
++# Manager caller and passes only those read-only descriptors to the helper.
++allow r0dump_file_helper system_server:fd use;
++allow r0dump_file_helper apk_data_file:file { getattr read };
++
++allow system_server r0dump_file_helper_socket:sock_file write;
++allow system_server r0dump_file_helper:unix_stream_socket connectto;
++allow system_server r0dump_file_helper:fd use;
++# SELinux maps receipt of an O_PATH FD to the ioctl permission when no
++# FMODE_READ/FMODE_WRITE bit exists. This permits only FD receipt; the platform
++# neverallow still prevents system_server from opening, reading, or writing
++# external-storage directories.
++allow system_server fuse:dir ioctl;
++
++# The helper owns the directory file description even after system_server
++# duplicates it into a ParcelFileDescriptor. Only AMS can obtain and forward
++# this descriptor; its Binder entry validates the calling app UID/PID first.
++allow appdomain r0dump_file_helper:fd use;
+diff --git a/private/r0dump_manager_app.te b/private/r0dump_manager_app.te
+new file mode 100644
+--- /dev/null
++++ b/private/r0dump_manager_app.te
+@@ -0,0 +1,22 @@
++type r0dump_manager_app, domain;
++typeattribute r0dump_manager_app coredomain;
++
++app_domain(r0dump_manager_app)
++
++# Match the service discovery surface available to platform-signed privileged
++# apps.  The dedicated domain remains isolated from writer/session services.
++allow r0dump_manager_app app_api_service:service_manager find;
++allow r0dump_manager_app system_api_service:service_manager find;
++
++# Manager is the sole writer; configured targets and system_server only read.
++set_prop(r0dump_manager_app, r0dump_fusion_prop)
++get_prop(appdomain, r0dump_fusion_prop)
++get_prop(system_server, r0dump_fusion_prop)
++
++# MCP bridge: the app hosts an abstract-namespace stream socket ("r0dump_mcp")
++# that the r0dump_mcp_bridge relay (spawned in the shell domain by adb exec-out)
++# connects to. Gate this to userdebug/eng where adb automation is expected.
++userdebug_or_eng(`
++    allow r0dump_manager_app self:unix_stream_socket { create bind listen accept read write getopt setopt shutdown };
++    allow shell r0dump_manager_app:unix_stream_socket connectto;
++')
+diff --git a/private/seapp_contexts b/private/seapp_contexts
+--- a/private/seapp_contexts
++++ b/private/seapp_contexts
+@@ -177,6 +177,7 @@
+ neverallow user=_sdksandbox domain=((?!sdk_sandbox).)*
+ 
+ user=_app seinfo=platform name=com.android.traceur domain=traceur_app type=app_data_file levelFrom=all
++user=_app seinfo=platform isPrivApp=true name=com.android.r0dumpmanager domain=r0dump_manager_app type=privapp_data_file levelFrom=all
+ user=system seinfo=platform domain=system_app type=system_app_data_file
+ user=system seinfo=platform isPrivApp=true name=com.android.DeviceAsWebcam domain=device_as_webcam type=system_app_data_file levelFrom=all
+ user=bluetooth seinfo=bluetooth domain=bluetooth type=bluetooth_data_file
