@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="103" failures="0" disabled="0" errors="0" timestamp="2026-11-05T21:53:10" time="4320.242" name="AllTests">
+  <testsuite name="r0dump_ForceInvokeArtMethodTest" tests="3" failures="0" disabled="0" errors="0" time="7759.741">
+    <testcase name="r0dump_NormalThreadDispatchReturnsValue" status="run" time="146.924" classname="r0dump_ForceInvokeArtMethodTest" />
+    <testcase name="r0dump_NullThreadWithoutGuardFailsClosed" status="run" time="4318.647" classname="r0dump_ForceInvokeArtMethodTest" />
+    <testcase name="r0dump_NullThreadWithWrongMethodFailsClosed" status="run" time="3294.170" classname="r0dump_ForceInvokeArtMethodTest" />
+  </testsuite>
+  <testsuite name="ArtMethodTest" tests="9" failures="0" disabled="0" errors="0" time="1632.208">
+    <testcase name="BoxUnboxBoolean" status="run" time="196.371" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxByte" status="run" time="146.574" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxChar" status="run" time="193.560" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxShort" status="run" time="164.076" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxInt" status="run" time="146.332" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxLong" status="run" time="205.768" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxFloat" status="run" time="146.250" classname="ArtMethodTest" />
+    <testcase name="BoxUnboxDouble" status="run" time="212.228" classname="ArtMethodTest" />
+    <testcase name="ArrayList" status="run" time="221.049" classname="ArtMethodTest" />
+  </testsuite>
+  <testsuite name="r0dump_BufferTest" tests="26" failures="0" disabled="0" errors="0" time="81.992">
+    <testcase name="RejectsNullAndZeroAndHandlesChunkBoundaries" status="run" time="3.604" classname="r0dump_BufferTest" />
+    <testcase name="ExactPoolExhaustionReturnsImmediately" status="run" time="3.460" classname="r0dump_BufferTest" />
+    <testcase name="PartialClaimFailureRollsBackClaimedChunks" status="run" time="5.016" classname="r0dump_BufferTest" />
+    <testcase name="ConcurrentAcquireAndReleaseUsesLockFreePoolAccounting" status="run" time="8.800" classname="r0dump_BufferTest" />
+    <testcase name="ExposesSegmentsAndReusesFragmentedChunks" status="run" time="4.760" classname="r0dump_BufferTest" />
+    <testcase name="CaptureOutlivesPoolOwner" status="run" time="2.890" classname="r0dump_BufferTest" />
+    <testcase name="MoveAssignmentReleasesPreviousLease" status="run" time="4.485" classname="r0dump_BufferTest" />
+    <testcase name="PreparedCodeItemOwnsBytesAndConsumesLeaseOnce" status="run" time="4.338" classname="r0dump_BufferTest" />
+    <testcase name="PreparedCodeItemHonorsPoolAndSizeLimits" status="run" time="4.333" classname="r0dump_BufferTest" />
+    <testcase name="PreparedCodeItemHonorsConfiguredSizeLimit" status="run" time="2.847" classname="r0dump_BufferTest" />
+    <testcase name="DuplicateMergesObservationWhileCollisionAndFormatStayDistinct" status="run" time="2.693" classname="r0dump_BufferTest" />
+    <testcase name="ReferencesExistingDexWithoutAcquiringAnotherPoolLease" status="run" time="2.700" classname="r0dump_BufferTest" />
+    <testcase name="RejectsInvalidContextAndRecordsBudgetDrops" status="run" time="2.605" classname="r0dump_BufferTest" />
+    <testcase name="EntryLimitIsIndependentFromByteLimit" status="run" time="2.511" classname="r0dump_BufferTest" />
+    <testcase name="CodeItemContentChangeCreatesDistinctPayload" status="run" time="2.428" classname="r0dump_BufferTest" />
+    <testcase name="FreezeKeepsGenerationAliveAndValidatesRelease" status="run" time="1.739" classname="r0dump_BufferTest" />
+    <testcase name="FreezeAndIdleFlushHonorConfiguredLimits" status="run" time="1.699" classname="r0dump_BufferTest" />
+    <testcase name="RunBudgetsRemainConsumedAcrossGenerations" status="run" time="1.789" classname="r0dump_BufferTest" />
+    <testcase name="FlushWatermarkUsesReachablePoolBound" status="run" time="1.728" classname="r0dump_BufferTest" />
+    <testcase name="EveryStagedObservationRefreshesIdleDeadline" status="run" time="1.642" classname="r0dump_BufferTest" />
+    <testcase name="ForceFlushAndFreezeResetOnlyActiveState" status="run" time="2.866" classname="r0dump_BufferTest" />
+    <testcase name="SummaryPreservesHighWaterAndUnrecordedDrops" status="run" time="2.806" classname="r0dump_BufferTest" />
+    <testcase name="TrySummaryDoesNotWaitForStagingLock" status="run" time="2.725" classname="r0dump_BufferTest" />
+    <testcase name="SubmissionPathsDoNotWaitForStagingLock" status="run" time="1.480" classname="r0dump_BufferTest" />
+    <testcase name="MetadataRecordFreezesWithoutArtifact" status="run" time="1.411" classname="r0dump_BufferTest" />
+    <testcase name="ConcurrentAcquireIsNonBlockingAndBounded" status="run" time="4.636" classname="r0dump_BufferTest" />
+  </testsuite>
+  <testsuite name="r0dump_CaptureTest" tests="19" failures="0" disabled="0" errors="0" time="232.506">
+    <testcase name="EntryKindClassificationUsesStableEnums" status="run" time="1.828" classname="r0dump_CaptureTest" />
+    <testcase name="StagedResultRequiresAcceptedOrDuplicateSubmit" status="run" time="1.757" classname="r0dump_CaptureTest" />
+    <testcase name="NearbyScannerFindsCompleteDexContainingAnchor" status="run" time="1.826" classname="r0dump_CaptureTest" />
+    <testcase name="CopiesDexViewsAndRejectsOutOfContainerRange" status="run" time="1.772" classname="r0dump_CaptureTest" />
+    <testcase name="OwnedDexSurvivesBorrowedBytesChanging" status="run" time="1.683" classname="r0dump_CaptureTest" />
+    <testcase name="HashAlwaysDescribesOwnedBytes" status="run" time="2.929" classname="r0dump_CaptureTest" />
+    <testcase name="CapturesDexDataAndValidCodeItem" status="run" time="2.788" classname="r0dump_CaptureTest" />
+    <testcase name="DefersPreparedCodeItemSubmissionWithOwnedMetadata" status="run" time="2.913" classname="r0dump_CaptureTest" />
+    <testcase name="ExecutionSitesKeepIndependentCodeItemRoles" status="run" time="2.835" classname="r0dump_CaptureTest" />
+    <testcase name="ReflectionSitesKeepIndependentCodeItemRoles" status="run" time="2.973" classname="r0dump_CaptureTest" />
+    <testcase name="InstrumentationRecordsKeepExitKindsDistinct" status="run" time="1.523" classname="r0dump_CaptureTest" />
+    <testcase name="JitCompileRecordsKeepAttemptIdentity" status="run" time="2.824" classname="r0dump_CaptureTest" />
+    <testcase name="PreparedCodeItemRejectsInvalidRangeAndUnavailablePool" status="run" time="2.965" classname="r0dump_CaptureTest" />
+    <testcase name="PreservesClassDefinitionIndexOnDexObservation" status="run" time="2.909" classname="r0dump_CaptureTest" />
+    <testcase name="RejectsInvalidCodeOffsetAndPoolExhaustion" status="run" time="1.439" classname="r0dump_CaptureTest" />
+    <testcase name="RejectsSynchronousReentrancyWithoutDroppingOuterCapture" status="run" time="2.976" classname="r0dump_CaptureTest" />
+    <testcase name="PreservesLegacyCompactDexBufferWithoutRelabeling" status="run" time="1.522" classname="r0dump_CaptureTest" />
+    <testcase name="ProductionFacadeGatesAndDeduplicatesOpenCommonObservations" status="run" time="2.819" classname="r0dump_CaptureTest" />
+    <testcase name="ProductionFacadeSizesPoolForConfiguredDexLimit" status="run" time="190.225" classname="r0dump_CaptureTest" />
+  </testsuite>
+  <testsuite name="r0dump_ConfigTest" tests="11" failures="0" disabled="0" errors="0" time="22.743">
+    <testcase name="AcceptsCanonicalConfig" status="run" time="1.534" classname="r0dump_ConfigTest" />
+    <testcase name="RejectsUndefinedCapturePointBit" status="run" time="2.831" classname="r0dump_ConfigTest" />
+    <testcase name="ForceInvokeRequiresNoExecutePointAndBoundedScope" status="run" time="1.646" classname="r0dump_ConfigTest" />
+    <testcase name="RejectsPathLikeIdentityFields" status="run" time="2.835" classname="r0dump_ConfigTest" />
+    <testcase name="NamespacePrefixIsExplicitAndSegmentBounded" status="run" time="2.798" classname="r0dump_ConfigTest" />
+    <testcase name="AcceptsOnlyCanonicalOutputParent" status="run" time="1.599" classname="r0dump_ConfigTest" />
+    <testcase name="RejectsBudgetsOutsideDocumentedHardLimits" status="run" time="1.515" classname="r0dump_ConfigTest" />
+    <testcase name="RejectsConfigurableBufferAndManifestLimitsOutsideCeilings" status="run" time="2.915" classname="r0dump_ConfigTest" />
+    <testcase name="RejectsUnknownWalkSelectors" status="run" time="1.728" classname="r0dump_ConfigTest" />
+    <testcase name="PublishesOneImmutableSnapshot" status="run" time="1.636" classname="r0dump_ConfigTest" />
+    <testcase name="EmptyTargetProcessMatchesAllPackageProcesses" status="run" time="1.705" classname="r0dump_ConfigTest" />
+  </testsuite>
+  <testsuite name="r0dump_FileTest" tests="26" failures="0" disabled="0" errors="0" time="782.045">
+    <testcase name="RejectsUnsafeAndOversizedComponents" status="run" time="2.802" classname="r0dump_FileTest" />
+    <testcase name="CreatesGroupAccessibleTreeAndWritesSegmentsAtomically" status="run" time="39.742" classname="r0dump_FileTest" />
+    <testcase name="SharedOutputParentDoesNotNeedProcessOwnership" status="run" time="2.655" classname="r0dump_FileTest" />
+    <testcase name="PreparedDirectoryDescriptorPreservesGroupContract" status="run" time="21.487" classname="r0dump_FileTest" />
+    <testcase name="WritesTruthfulSessionSnapshot" status="run" time="21.427" classname="r0dump_FileTest" />
+    <testcase name="WritesBoundedManifestSnapshotWithoutRawSources" status="run" time="21.343" classname="r0dump_FileTest" />
+    <testcase name="DoesNotRecreateMissingPreparedDirectory" status="run" time="2.390" classname="r0dump_FileTest" />
+    <testcase name="PreparedRunDirectoryRequiresSetgidOwnershipContract" status="run" time="2.353" classname="r0dump_FileTest" />
+    <testcase name="ReopensPreparedOPathDescriptorForDirectoryFsync" status="run" time="10.144" classname="r0dump_FileTest" />
+    <testcase name="RejectsSymlinkedIntermediateDirectory" status="run" time="2.269" classname="r0dump_FileTest" />
+    <testcase name="TrustedDescriptorCannotEscapeAfterPathReplacement" status="run" time="2.285" classname="r0dump_FileTest" />
+    <testcase name="RejectsExistingProcessRunDirectoryWithoutOverwritingEvidence" status="run" time="19.864" classname="r0dump_FileTest" />
+    <testcase name="RetriesInterruptedAndShortWrites" status="run" time="18.656" classname="r0dump_FileTest" />
+    <testcase name="FailuresBeforeRenamePreserveCanonicalAndCleanTemporary" status="run" time="30.017" classname="r0dump_FileTest" />
+    <testcase name="DirectoryFsyncFailureReportsDegradedAfterRename" status="run" time="8.993" classname="r0dump_FileTest" />
+    <testcase name="SummaryFsyncFailureRemovesVisibleCompletionMarker" status="run" time="8.925" classname="r0dump_FileTest" />
+    <testcase name="WritesArtifactBeforeIndependentRecords" status="run" time="81.892" classname="r0dump_FileTest" />
+    <testcase name="SerializesStructuredSourceMetadata" status="run" time="64.197" classname="r0dump_FileTest" />
+    <testcase name="SerializesMethodExecutionStateMetadata" status="run" time="43.397" classname="r0dump_FileTest" />
+    <testcase name="UsesDocumentedArtifactExtensions" status="run" time="160.245" classname="r0dump_FileTest" />
+    <testcase name="ArtifactFailurePublishesNoRecordAndRetainsGeneration" status="run" time="2.138" classname="r0dump_FileTest" />
+    <testcase name="RecordFailureLeavesOnlyDurableReferencesPublished" status="run" time="41.884" classname="r0dump_FileTest" />
+    <testcase name="RejectsDuplicateRecordSequenceBeforeWritingArtifact" status="run" time="3.198" classname="r0dump_FileTest" />
+    <testcase name="SuccessfulWriteAndReleaseClearsFrozenGeneration" status="run" time="61.786" classname="r0dump_FileTest" />
+    <testcase name="FailedWriteAndReleaseRetainsFrozenGeneration" status="run" time="2.138" classname="r0dump_FileTest" />
+    <testcase name="WritesTerminalSummaryFromBoundedState" status="run" time="105.818" classname="r0dump_FileTest" />
+  </testsuite>
+  <testsuite name="r0dump_HookPointTest" tests="5" failures="0" disabled="0" errors="0" time="10.828">
+    <testcase name="DefinedPointsHaveUniqueOneBitMasks" status="run" time="2.153" classname="r0dump_HookPointTest" />
+    <testcase name="NamesRoundTripForEveryDefinedPoint" status="run" time="1.805" classname="r0dump_HookPointTest" />
+    <testcase name="RejectsUndefinedMaskBits" status="run" time="2.288" classname="r0dump_HookPointTest" />
+    <testcase name="ForceInvokeUsesBit41" status="run" time="2.284" classname="r0dump_HookPointTest" />
+    <testcase name="EnabledCheckRejectsUndefinedPoints" status="run" time="2.298" classname="r0dump_HookPointTest" />
+  </testsuite>
+  <testsuite name="r0dump_LogTest" tests="4" failures="0" disabled="0" errors="0" time="9.016">
+    <testcase name="FormatsAndEscapesStructuredFields" status="run" time="2.284" classname="r0dump_LogTest" />
+    <testcase name="LimitsEachEventStatusAndSiteAndReportsSuppression" status="run" time="2.286" classname="r0dump_LogTest" />
+    <testcase name="UsesIndependentRateBuckets" status="run" time="2.286" classname="r0dump_LogTest" />
+    <testcase name="SerializesConcurrentCalls" status="run" time="2.160" classname="r0dump_LogTest" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,67 @@
+[
+  {
+    "test": "r0dump_config_boundary_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f2_canonical_output_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f2_flush_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f3_hook_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f4_class_linker_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f5_oat_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f7_class_loader_walk_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f8_force_invoke_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f9_dispatch_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f9_jit_compile_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f9_reflect_instrument_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_f9d_libcore_route_source_test.py",
+    "exit": 0,
+    "output": ""
+  },
+  {
+    "test": "r0dump_nterp_method_entry_source_test.py",
+    "exit": 0,
+    "output": ""
+  }
+]

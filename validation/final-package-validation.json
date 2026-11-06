@@ -1,0 +1,36 @@
+[
+  {
+    "baseline": "preserved-user-baseline",
+    "preflight_and_apply": [
+      "--check",
+      "--apply"
+    ],
+    "files": 174,
+    "manager_and_helper_included": true,
+    "product_reference_once": true,
+    "reverse_check": true,
+    "duplicate_apply_blocked": true,
+    "expected_source_mismatches": [
+      "device/google/raviole/aosp_raven.mk"
+    ]
+  },
+  {
+    "baseline": "clean-commits",
+    "preflight_and_apply": [
+      "--check",
+      "--apply"
+    ],
+    "files": 174,
+    "manager_and_helper_included": true,
+    "product_reference_once": true,
+    "reverse_check": true,
+    "duplicate_apply_blocked": true,
+    "expected_source_mismatches": [
+      "frameworks/base/core/java/android/app/ActivityThread.java",
+      "frameworks/base/core/res/AndroidManifest.xml",
+      "system/sepolicy/private/file_contexts",
+      "system/sepolicy/private/seapp_contexts",
+      "device/google/raviole/aosp_raven.mk"
+    ]
+  }
+]
