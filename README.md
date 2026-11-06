@@ -20,8 +20,8 @@
 
 ```bash
 cd /path/to/aosp-r0dump-15-patch
-./apply.sh --check /path/to/aosp-15
-./apply.sh --apply /path/to/aosp-15
+bash apply.sh --check /path/to/aosp-15
+bash apply.sh --apply /path/to/aosp-15
 ```
 
 当前 `/media/zwzw/AOSP/new-15` 已经融合了这些改动，不要再次应用。`--check` 只适用于尚未安装 R0dumpManager 的目标树。
